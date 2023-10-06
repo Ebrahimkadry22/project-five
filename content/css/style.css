@@ -1,0 +1,311 @@
+/* Start globel */
+:root {
+    --primary-font:'DynaPuff', cursive;
+    --primary-color:#ffc222;
+    --secondry-color:#00a149;
+    --white-color:#fff;
+    --text-color:#b0b0b0;
+    --black-color:#1E1D23;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--primary-font);
+}
+a,
+a:hover {
+    text-decoration: none;
+}
+a:hover {
+    color: var(--primary-color)!important;
+}
+:active ,
+:hover ,
+:focus {
+    outline: none;
+    outline-offset: 0;
+}
+/* Start scrollbar */
+::-webkit-scrollbar {
+    width: .6rem;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--white-color);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondry-color);
+}
+h1 span {
+    color:var(--primary-color);
+}
+h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: var(--secondry-color);
+    line-height: 3rem;
+}
+h4 {
+    color: var(--secondry-color);
+    text-transform: capitalize;
+    font-size: 1.2 rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+h5 {
+    color:var(--black-color);
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+p {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+}
+.wrapper {
+    padding:4.25rem 0 ;
+}
+.text-content {
+    width: 70%;
+    margin: auto;
+}
+/* End scrollbar */
+/* Start button */
+.main-btn {
+    background-color: var(--primary-color);
+    display: inline-block;
+    color: var(--black-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 10px 16px;
+    border: .1rem solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px -10px ragb(0 0 0 / 19%);
+    transition:  background-color color .3s ease-in-out;
+}
+.main-btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+/* End button */
+/* Start media */
+@media(max-width:991px){
+    .navigation-wrap .navbar-brand img {
+        height: 2.6rem !important;
+    }
+    .text-content {
+        width: 100%;
+    }
+    .navigation-wrap {
+        text-align: center;
+        background-color: var(--white-color);
+    }
+    .navigation-wrap .nav-link {
+        color: var(--black-color);
+        line-height: 2rem;
+    }
+    .top-banner {
+    padding: 9.3em 0 9.3rem;
+    }
+    .icon__footer {
+        padding: 0 .1rem;
+    }
+    
+}
+@media (max-width:767px){
+    h1 {
+        font-size: 2.3rem;
+    }
+    h1 span {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+        line-height: 28px;
+    }
+    .top-banner {
+    padding: 9.3em 0 9.3rem;
+}
+
+}
+/* End media  */
+
+/* End globel */
+/*start nav  */
+.navigation-wrap {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+
+}
+.navigation-wrap .nav-item {
+    padding: 0 .6rem;
+}
+.navbar-toggler-icon {
+    color: var(--secondry-color);
+}
+.navbar-toggler:focus {
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+}
+
+
+/* .navbar-collapse {
+    /* background-color: var(--white-color); 
+    filter: blur(1px);
+} */
+.navigation-wrap {
+    background-color: rgba(0, 0, 0, .2);
+}
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--white-color);
+    letter-spacing: 1px;
+}
+.nav-link:hover ,
+.nav-link .active {
+    color: var(--primary-color)!important;
+}
+.navigation-wrap .main-btn {
+    padding: .5rem  1.4rem;
+    box-shadow: none;
+    margin-left: .6rem;
+}
+/*End nav  */
+/* Start home */
+.top-banner {
+    width: 100%;
+    background: url(../asstes/image/bg/bg-1.jpg) no-repeat center ;
+    background-size: cover;
+    /* padding: 25.8rem 0 9.3rem; */
+    height: 100vh;
+}
+
+/* End home */
+/* Start our menu  */
+.our-menu .card {
+    border: none;
+}
+.our-menu .link_category_product {
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+.our-menu .link_category_product::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    inset: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0);
+    border-radius: 50%;
+    border: 2px dotted var(--secondry-color);
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+.card:hover .link_category_product::after {
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+.our-menu .cat__title a {
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--black-color);
+    position: relative;
+}
+/* Start our menu  */
+/* Start about */
+.about {
+    background-color: var(--black-color);
+}
+.text-sec {
+    padding-left: 2rem;
+}
+
+.food-type .card {
+    background-color: var(--black-color);
+}
+.food-type ul li {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    line-height: 32px;
+    
+}
+.icon__food {
+    color: var(--primary-color);
+}
+/* End about */
+/* Start reviwes */
+.reviewes {
+    background-color: var(--secondry-color);
+}
+.reviewes h2 {
+    color: var(--white-color);
+}
+.carousel-item {
+    text-align: center;
+    padding: 5rem 3.123rem;
+    background-color: var(--black-color);
+    border-radius: 10px;
+    
+}
+.carousel-item img {
+    max-width: 5rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+.reviewes .carousel-indicators button {
+    width:15px ;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    margin-left: 1rem;
+}
+
+/* End reviwes */
+/* Start Footer */
+.footer {
+    background: var(--black-color);
+}
+ .icon__footer{
+    color: var(--white-color);
+    font-size: 2rem;
+    padding: 0 1.3rem;
+}
+.footer .footer-social a:hover .icon__footer {
+    color: var(--primary-color);
+}
+.footer .main-btn {
+    background-color: var(--white-color);
+    border: none;
+    border-radius: 0 10px 10px 0;
+
+}
+.form-control {
+    border-radius: 10px 0 0 10px;
+}
+.form-control:focus {
+    box-shadow: none;
+    outline: none;
+    border:none;
+    
+}
+/* End Footer */
+
+@media (max-width: 991px){
+.navigation-wrap{
+    background-color: rgba(255, 255, 255, .8) !important ;
+}
+}
